@@ -9,5 +9,8 @@ git clone git@github.com:ahmed-yesuf/six-degree-of-freedom-serial-manipulator.gi
 2. Execute: `performPickAndPlace.m` - you can also modify the content of this file to try different pick and place positions.
 
 ## Simulation result
-![sample result](Report/result.jpg)
+<div align="center">
+  <img src="/docs/pick_and_place_sim.gif" alt="Simulation" />
+</div>
+
 
