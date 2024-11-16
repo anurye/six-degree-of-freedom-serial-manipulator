@@ -1,4 +1,28 @@
 function q = inv_kine(Td, dh, q_previous)
+% INV_KINE computes the inverse kinematics of the manipulator
+%
+% Parameters
+% ----------
+% Td : matrix
+%   The desired homogeneous transformation matrix of the end-effector,
+%
+% dh : matrix
+%   The Denavit-Hartenberg (DH) parameter table for the manipulator.
+%   - Column 1: Joint angle offset (theta)
+%   - Column 2: Link offset (d)
+%   - Column 3: Link length (a)
+%   - Column 4: Twist angle (alpha)
+%
+% q_previous : list
+%   The joint angles (in radians) from the previous configuration, 
+%   used as a reference for resolving ambiguities in solutions.
+%
+% Returns
+% -------
+% q : list
+%   The joint angles (in radians) required to achieve the desired end-effector pose.
+%
+
 % Offset angle
 q_off = dh(:, 1)';
 

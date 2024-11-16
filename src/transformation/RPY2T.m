@@ -1,5 +1,20 @@
 function T = RPY2T(rpy)
-% Converty roll, pitch, yaw to transformation matrix
+% RPY2T converts roll, pitch, and yaw angles to a homogeneous transformation matrix
+%
+% Parameters
+% ----------
+% rpy : list
+%   A vector containing the roll, pitch, and yaw angles (in rad):
+%   - rpy(1): Roll angle
+%   - rpy(2): Pitch angle
+%   - rpy(3): Yaw angle
+%
+% Returns
+% -------
+% T : matrix
+%   The homogeneous transformation matrix corresponding to the specified roll, pitch, and yaw angles.
+%
+
 % Extract the roll, pitch, yaw angles
 g = rpy(1); b = rpy(2); a = rpy(3);
 

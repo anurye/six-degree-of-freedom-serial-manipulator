@@ -1,5 +1,16 @@
 function gripper(option, port_num)
-% This function is used for opening and closing the gripper
+%GRIPPER controls the gripper to open or close based on the specified option
+%
+% Parameters
+% ----------
+% option : char
+%     Specifies the gripper operation. Must be either 'open' or 'close'.
+%     - 'open': Sets the gripper to the open position.
+%     - 'close': Sets the gripper to the closed position.
+%
+% port_num : int
+%     The identifier of the port through which the gripper is connected.
+%
 
 % Determine what operation is required, based on that set motor position
 switch option

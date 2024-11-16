@@ -1,6 +1,25 @@
 function [Q, dQ] = task_traj(fhandle, Ti, Tf)
-% Accepts the initial and final homogenous matrices and computes the task
-% space trakectory
+%TASK_TRAJ generates a task-space trajectory for a manipulator
+%
+% Parameters
+% ----------
+% fhandle : function_handle
+%   A function handle to compute the trajectory interpolation (e.g., linear interpolation).
+%
+% Ti : matrix
+%   Initial homogeneous transformation matrix specifying the starting pose of the manipulator in task space.
+%
+% Tf : matrix
+%   Final homogeneous transformation matrix specifying the ending pose of the manipulator in task space.
+%
+% Returns
+% -------
+% Q : matrix
+%   The joint positions for the manipulator at each trajectory step.
+%
+% dQ : matrix
+%   The joint velocities for the manipulator at each trajectory step.
+%
 
 % Check the first argument is a function handle if not print error
 if ~isa(fhandle, 'function_handle')

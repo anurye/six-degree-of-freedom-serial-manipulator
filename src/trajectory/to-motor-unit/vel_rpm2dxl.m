@@ -1,5 +1,25 @@
 function vm = vel_rpm2dxl(v_rpm, varargin)
-% Convert velocity from rpm to dxl own unit
+%VEL_RPM2DXL converts velocities from RPM to motor units (Dynamixel's own unit)
+%
+% Parameters
+% ----------
+% v_rpm : scalar or vector
+%   - If scalar: A single joint velocity in RPM.
+%   - If vector: A vector of joint velocities in RPM for all joints (length must be 6).
+%
+% varargin : string, optional
+%   - Specifies the motor type when `v_rpm` is scalar. Acceptable values:
+%       - "ax": For AX-series motors (0.111 RPM/unit).
+%       - "mx": For MX-series motors (0.114 RPM/unit).
+%   - If `v_rpm` is a vector, no additional arguments are required.
+%
+% Returns
+% -------
+% vm : scalar or vector
+%     The converted velocity in Dynamixel's motor units. The format matches the input `v_rpm`:
+%     - If `v_rpm` is scalar, `vm` is scalar.
+%     - If `v_rpm` is a vector, `vm` is a vector of velocities in motor units.
+%
 
 % Handle varargin
 if length(varargin) > 1

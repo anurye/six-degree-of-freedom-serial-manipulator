@@ -1,5 +1,34 @@
 function [q, dq, ddq] = LSPB(q0, qf, T, v)
-% This function generates LSPB trajectory and returns q, dq, ddq
+% LSPB generates a trapezoidal velocity (LSPB) trajectory
+%
+% Parameters
+% ----------
+% q0 : double
+%   Initial joint position (in radians).
+%
+% qf : double
+%   Final joint position (in radians).
+%
+% T : scalar or vector
+%   - If scalar: The number of time steps for the trajectory.
+%   - If vector: The time vector for the trajectory.
+%
+% v : double, optional
+%   Desired maximum velocity for the trajectory. 
+%   If not provided, it will be calculated automatically.
+%
+% Returns
+% -------
+% q : list
+%   Joint positions at each time step.
+%
+% dq : list
+%   Joint velocities at each time step.
+%
+% ddq : list
+%   Joint accelerations at each time step.
+%
+
 % Check if time vector is provided. if num of step is provided create t.
 if isscalar(T)
     t = (0:T-1)';

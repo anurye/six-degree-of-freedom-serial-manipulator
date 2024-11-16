@@ -1,4 +1,21 @@
 function [pos, rpy] = T2RPY(T)
+% T2RPY extracts the position and roll-pitch-yaw (RPY) angles from a 
+% homogeneous transformation matrix
+%
+% Parameters
+% ----------
+% T : matrix
+%   A homogeneous transformation matrix specifying the position and orientation of a coordinate frame.
+%
+% Returns
+% -------
+% pos : list
+%   The position vector `[x, y, z]` extracted from the transformation matrix.
+%
+% rpy : list
+%   The roll-pitch-yaw angles `[roll, pitch, yaw]` in rad.
+%
+
 % End effector rpy angles calculation
 r11 = T(1, 1); r12 = T(1, 2); r13 = T(1, 3);
 r21 = T(2, 1); r22 = T(2, 2); r23 = T(2, 3);

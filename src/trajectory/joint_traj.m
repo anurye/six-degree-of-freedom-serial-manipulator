@@ -1,4 +1,36 @@
 function [Q, dQ, ddQ] = joint_traj(fhandle, q0, qf, T, V)
+%JOINT_TRAJ generates joint space trajectories for a manipulator
+%
+% Parameters
+% ----------
+% fhandle : function_handle
+%   A function handle that computes the trajectory for a single joint.
+%
+% q0 : list
+%   Initial joint positions (in rad) for all joints.
+%
+% qf : list
+%   Final joint positions (in rad) for all joints.
+%
+% T : scalar or vector
+%   - If scalar: The total duration of the trajectory in seconds.
+%   - If vector: The time steps for the trajectory.
+%
+% V : vector, shape (1, n), optional
+%   Desired velocities for all joints at the end of the trajectory.
+%
+% Returns
+% -------
+% Q : matrix
+%   The joint positions at each time step.
+%
+% dQ : matrix, shape (length(T), n)
+%   The joint velocities at each time step.
+%
+% ddQ : matrix, shape (length(T), n)
+%   The joint accelerations at each time step.
+%
+
 % Check correct number of input is provided
 if nargin < 4 || nargin > 5
     error("Wrong number of argument provided.\n")

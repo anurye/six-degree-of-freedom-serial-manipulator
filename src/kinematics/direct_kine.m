@@ -1,6 +1,28 @@
 function [Tee, E] = direct_kine(dh, q)
-% Retruns the direct kinematics interms of homogenous matrix also interms
-% of euler angles in two outputs are specified (if nargout == 2)  
+% DIRECT_KINE computes the forward kinematics of the manipulator
+%
+% Parameters
+% ----------
+% dh : matrix, shape (n, 4)
+%   The Denavit-Hartenberg (DH) parameter table for the manipulator.
+%   - Column 1: Joint angle offset (theta)
+%   - Column 2: Link offset (d)
+%   - Column 3: Link length (a)
+%   - Column 4: Twist angle (alpha)
+%
+% q : list
+%   Joint angles (in radians) for all joints of the manipulator.
+%
+% Returns
+% -------
+% Tee : matrix
+%   The homogeneous transformation matrix representing the position and orientation
+%   of the end-effector with respect to the base frame.
+%
+% E : list (1, 6) [optional]
+%   A vector representing the end-effector's position and Euler angles:
+%   - [x, y, z, phi, theta, psi]
+%
 
 % Offset angle
 q_off = dh(:, 1);

@@ -1,4 +1,15 @@
 function dh_table = dh()
+% DH generates the Denavit-Hartenberg (DH) parameter table of the manipulator
+%
+% Returns
+% -------
+% dh_table : matrix, shape (6, 4)
+%     - Column 1: Joint angle offset (theta)
+%     - Column 2: Link offset (d)
+%     - Column 3: Link length (a)
+%     - Column 4: Twist angle (alpha)
+%
+
 % Joint angles
 q1_off = 0;
 q2_off = -pi/2;

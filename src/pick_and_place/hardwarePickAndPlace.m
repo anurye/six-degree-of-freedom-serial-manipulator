@@ -1,13 +1,13 @@
 function hardwarePickAndPlace(pickPose, placePose)
-% hardwarePickAndPlace.m: performs the pick and place operation using the
-% actual hardware.
+%HARDWAREPICKANDPLACE performs a pick-and-place operation using hardware
 %
-% Parameters:
-%           pickPose: pick position 1x3
-%           placePose: place position 1x3
+% Parameters
+% ----------
+% pickPose : list
+%   The Cartesian coordinates [x, y, z] of the pick position.
 %
-% Returns:
-%         None
+% placePose : list
+%   The Cartesian coordinates [x, y, z] of the place position.
 %
 
 % Check if appropriate arguments are provided

@@ -1,5 +1,23 @@
 function qm = joint2motor(qj, varargin)
-% Accepts joint angles in radian and returns it in the manupulator unit
+%JOINT2MOTOR converts joint angles (in rad) to motor positions in manipulator units
+%
+% Parameters
+% ----------
+% qj : scalar or vector
+%   - If scalar: A single joint angle (in radians) for conversion.
+%   - If vector: A vector of joint angles (in radians) for all joints (length must be 6).
+%
+% varargin : str, optional
+%   - Specifies the motor type when `qj` is scalar. Acceptable values:
+%       - "ax": For AX-series motors (300° range).
+%       - "mx": For MX-series motors (360° range).
+%   - If `qj` is a vector, no additional arguments are required.
+%
+% Returns
+% -------
+% qm : scalar or vector
+%   The motor positions in manipulator units. The output has the same format as the input `qj`:
+%
 
 % Handle varargin
 if length(varargin) > 1

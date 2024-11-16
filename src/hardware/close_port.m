@@ -1,5 +1,15 @@
 function port_num = close_port(port_num)
-% This function is used to close the opned port
+%CLOSE_PORT closes the specified port and unloads the corresponding library
+%
+% Parameters
+% ----------
+% port_num : int
+%     The identifier for the port to be closed.
+%
+% Returns
+% -------
+%   []
+%
 
 lib_name = '';
 

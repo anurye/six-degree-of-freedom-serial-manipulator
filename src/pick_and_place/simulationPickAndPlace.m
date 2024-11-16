@@ -1,15 +1,24 @@
 function Q_trajectory = simulationPickAndPlace(pickPose, placePose, varargin)
-% simulationPickAndPlace.m: performs the pick and place operation in
-% simulation.
+% simulationPickAndPlace - Simulates a pick-and-place operation in a virtual environment
 %
-% Parameters:
-%           pickPose: pick position 1x3
-%           placePose: place position 1x3
-%           varargin: optional logical parameter to disable simulation
-%           display
+% Parameters
+% ----------
+% pickPose : vector, shape (1, 3)
+%   The Cartesian coordinates [x, y, z] of the pick position.
 %
-% Returns:
-%         None
+% placePose : vector, shape (1, 3)
+%   The Cartesian coordinates [x, y, z] of the place position.
+%
+% varargin{1} : logical (optional)
+%   A single optional logical value to enable or disable simulation visualization.
+%   - `true` (default): Enables visualization.
+%   - `false`: Disables visualization.
+%
+% Returns
+% -------
+% Q_trajectory : matrix
+%   A matrix where each row represents the joint configuration at a specific time step
+%   for the entire pick-and-place operation.
 %
 
 % Check if appropriate arguments are provided

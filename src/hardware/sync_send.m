@@ -1,6 +1,17 @@
 function sync_send(Q, dQ, port_num)
-% This function sends position and velocity for all six joints one at 
-% a time through the write_pos_and_vel function.
+% SYNC_SEND sends position and velocity data for all six joints sequentially
+%
+% Parameters
+% ----------
+% Q : matrix
+%     A matrix where each col represents position values for the six joints.
+%
+% dQ : matrix
+%     A matrix where each col represents velocity values for the six joints.
+%
+% port_num : int
+%     The identifier of the port through which the data is sent.
+%
 
 % delay between consequetive send
 %dt = 0.01;

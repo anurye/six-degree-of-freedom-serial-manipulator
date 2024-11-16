@@ -1,5 +1,11 @@
 function port_num = open_port
-% This function is used for opening port
+% OPEN_PORT opens a port and configures it for communication with Dynamixel actuators
+%
+% Returns
+% -------
+% port_num : int
+%     The identifier for the opened port.
+%
 
 lib_name = '';
 

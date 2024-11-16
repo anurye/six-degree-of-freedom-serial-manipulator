@@ -1,5 +1,15 @@
 function enable_torque(DXL_ID, port_num)
-% This function is responsible for enabling torque for gven Dynamixel ID
+% ENABLE_TORQUE enables torque for the specified Dynamixel actuator
+%
+% Parameters
+% ----------
+% DXL_ID : int
+%     The ID of the Dynamixel actuator for which torque will be enabled.
+%
+% port_num : int
+%     The identifier of the port through which the actuator is connected.
+%
+
 lib_name = '';
 
 if strcmp(computer, 'PCWIN')

@@ -1,6 +1,17 @@
 function  write_data(q, qd, port_num)
-% This function is modified version of sync_write script
-% Accepts the psition and velocity and write this to the manipulator.
+%WRITE_DATA sends position and velocity commands to the Dynamixel manipulator
+%
+% Parameters
+% ----------
+% q : list
+%     A vector containing the desired position values for the six joints.
+%
+% qd : list
+%     A vector containing the desired velocity values for the six joints.
+%
+% port_num : int
+%     The identifier of the port used for communication.
+%
 
 lib_name = '';
 
