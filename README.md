@@ -13,5 +13,8 @@ git clone git@github.com:ahmed-yesuf/six-degree-of-freedom-serial-manipulator.gi
   <img src="/docs/pick_and_place_sim.gif" alt="Simulation" />
 </div>
 
-<video controls src="pick_and_place_act.mp4" title="Hardware"></video>
+
+https://github.com/user-attachments/assets/ce13ee31-61c0-435c-ab3d-c9dd68cacf5c
+
+
 
