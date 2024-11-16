@@ -14,7 +14,5 @@ git clone git@github.com:ahmed-yesuf/six-degree-of-freedom-serial-manipulator.gi
 </div>
 
 
-https://github.com/user-attachments/assets/ce13ee31-61c0-435c-ab3d-c9dd68cacf5c
-
-
+https://github.com/user-attachments/assets/08a6d30d-d06e-48a3-a979-dc937c068735
 
